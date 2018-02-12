@@ -1,0 +1,24 @@
+{
+    "name": "divineomega/object_to_array",
+    "description": "This PHP package provides an `object_to_array` helper function.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jordan Hall",
+            "email": "jordan@hall05.co.uk"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "fzaninotto/faker": "^1.6",
+        "satooshi/php-coveralls": "^2.0"
+    },
+    "autoload": {
+        "files": [
+            "src/Functions.php"
+        ]
+    },
+    "license": "LGPL-3.0-only",
+    "require": {
+    }
+}
