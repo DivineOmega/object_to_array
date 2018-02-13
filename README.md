@@ -19,7 +19,7 @@ If you have never used the Composer dependency manager before, head to the [Comp
 
 ## Usage
 
-Here are a few example of how to use the `object_to_array` helper function.
+Here are a few examples of how to use the `object_to_array` helper function.
 
 ```php
 // Basic object

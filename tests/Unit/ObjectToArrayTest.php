@@ -6,13 +6,13 @@ class ObjectToArrayTest extends TestCase
 {
     public function testBasicUsage()
     {
-        $object = new stdClass;
+        $object = new stdClass();
         $object->name = 'John';
         $object->age = 32;
 
         $expected = [
             'name' => 'John',
-            'age' => 32
+            'age'  => 32,
         ];
 
         $this->assertEquals($expected, object_to_array($object));
@@ -20,20 +20,20 @@ class ObjectToArrayTest extends TestCase
 
     public function testNested()
     {
-        $object = new stdClass;
+        $object = new stdClass();
         $object->name = 'John';
         $object->age = 32;
-        $object->pet = new stdClass;
+        $object->pet = new stdClass();
         $object->pet->type = 'cat';
         $object->pet->name = 'Mr Fluffkins The Third';
 
         $expected = [
             'name' => 'John',
-            'age' => 32,
-            'pet' => [
+            'age'  => 32,
+            'pet'  => [
                 'name' => 'Mr Fluffkins The Third',
-                'type' => 'cat'
-            ]
+                'type' => 'cat',
+            ],
         ];
 
         $this->assertEquals($expected, object_to_array($object));
@@ -41,24 +41,23 @@ class ObjectToArrayTest extends TestCase
 
     public function testArray()
     {
-        $object = new stdClass;
+        $object = new stdClass();
         $object->name = 'John';
         $object->age = 32;
         $object->favouriteFoods = [
             'pizza',
-            'cake'
+            'cake',
         ];
 
         $expected = [
-            'name' => 'John',
-            'age' => 32,
+            'name'           => 'John',
+            'age'            => 32,
             'favouriteFoods' => [
                 'pizza',
-                'cake'
-            ]
+                'cake',
+            ],
         ];
 
         $this->assertEquals($expected, object_to_array($object));
     }
-
 }
