@@ -1,12 +1,14 @@
 <?php
 
+namespace DivineOmega\ObjectToArray\Tests;
+
 use PHPUnit\Framework\TestCase;
 
 class ObjectToArrayTest extends TestCase
 {
     public function testBasicUsage()
     {
-        $object = new stdClass();
+        $object = new \stdClass();
         $object->name = 'John';
         $object->age = 32;
 
@@ -20,10 +22,10 @@ class ObjectToArrayTest extends TestCase
 
     public function testNested()
     {
-        $object = new stdClass();
+        $object = new \stdClass();
         $object->name = 'John';
         $object->age = 32;
-        $object->pet = new stdClass();
+        $object->pet = new \stdClass();
         $object->pet->type = 'cat';
         $object->pet->name = 'Mr Fluffkins The Third';
 
@@ -41,7 +43,7 @@ class ObjectToArrayTest extends TestCase
 
     public function testArray()
     {
-        $object = new stdClass();
+        $object = new \stdClass();
         $object->name = 'John';
         $object->age = 32;
         $object->favouriteFoods = [

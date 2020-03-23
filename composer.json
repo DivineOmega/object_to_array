@@ -9,16 +9,22 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": "^5.7",
+        "phpunit/phpunit": "^7.0 || ^8.0",
         "fzaninotto/faker": "^1.6",
-        "satooshi/php-coveralls": "^2.0"
+        "php-coveralls/php-coveralls": "^2.0"
     },
     "autoload": {
         "files": [
             "src/Functions.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "DivineOmega\\ObjectToArray\\Tests\\": "tests/Unit/"
+        }
+    },
     "license": "LGPL-3.0-only",
     "require": {
+        "php": ">=7.1"
     }
 }
